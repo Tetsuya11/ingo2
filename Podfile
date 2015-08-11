@@ -1,0 +1,2 @@
+pod"MDCSwipeToChoose"
+pod"SVProgressHUD"

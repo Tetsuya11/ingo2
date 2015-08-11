@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>プログラマー</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+	</dict>
+	<key>大学</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+	</dict>
+	<key>相撲界</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+	</dict>
+	<key>合コン</key>
+	<dict>
+		<key>幹事MAXの法則</key>
+		<string></string>
+		<key>関ヶ原</key>
+		<string>10対10以上で行う合コン</string>
+		<key>ゴッホ</key>
+		<string>あとあと可愛くかんじる</string>
+	</dict>
+	<key>航空業界</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>ミラクルフライト</key>
+		<string>搭乗客</string>
+		<key>スリムクリッカー</key>
+		<string>すぐ帰宅</string>
+	</dict>
+</dict>
+</plist>
