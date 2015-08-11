@@ -30,7 +30,7 @@
     NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
     
     NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
-    
+    ::
     NSString *cate2 =@"";
     
     
