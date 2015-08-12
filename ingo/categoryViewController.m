@@ -36,6 +36,9 @@
     
     _cateAry =[dic allKeys];
     NSLog(@"ここはどこだ=%@",_cateAry);
+    for(int i=0;i<_cateAry.count;i++){
+        NSLog(@"カテゴリー%@",_cateAry[i]);
+    }
     
     
     
