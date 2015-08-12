@@ -18,6 +18,7 @@ NSArray *arr2;
 
 AppDelegate *_appDelegate;
 
+//NSArray *categories;
    
     
     
@@ -55,6 +56,9 @@ AppDelegate *_appDelegate;
         cate =@"大学";
     }
     
+    //categories =[dic allKeys];//オールキーズはアレーで返す
+    
+    //NSLog(@"配列=%@",categories);
     NSLog(@"ここは　＝　(int)%@",dic[cate]);
     
     NSLog(@"わけわからん=%@",dic[cate][@"ゴッホ"]);
@@ -93,11 +97,12 @@ AppDelegate *_appDelegate;
     
     NSArray *ary =[dic[cate] allKeys];
    
-    NSLog(@"何入ってんだ=%@",ary);
+    
+   
+                                            NSLog(@"何入ってんだ=%@",ary);
     
     for (int i = 0; i < ary.count; i++) {
         NSLog(@"ary %i = %@", i,ary[i]);
-        
     
     }
     
@@ -133,8 +138,12 @@ numberOfRowsInSection:(NSInteger)section
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
     
+    
     nameLabel.text = _categoryName1[indexPath.row];
     
+    NSLog(@"なんか変です=%@",_categoryName1);
+
+  
     
     return cell;
 }
@@ -142,13 +151,22 @@ numberOfRowsInSection:(NSInteger)section
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
     NSLog(@"タップしよ");
     
+   // NSLog(@"こここk=%@",arr2);
+    
+    NSLog(@"_cate1 = %@",_categoryName1[indexPath.row]);
+    
     _appDelegate.categoryName1 =_categoryName1[indexPath.row];
     
             NSLog(@"入ってないだと=%@",_categoryName1);//ゴッホ
     
      _appDelegate.iPath2 = (int)indexPath.row;//テーブルの何番目かをipathに入れている　押されるとDetail mへ
     
-            NSLog(@"インデックスパスとは%@",indexPath);
+            NSLog(@"インデックスパスとは%li",(long)indexPath.row);
+    
+    //NSLog(@"大カテゴリ選択時 largeCate = %@",categories[indexPath.row]);
+   
+    //_appDelegate.largeCate = categories[indexPath.row];
+     
 }
 
     - (void)didReceiveMemoryWarning {

@@ -17,18 +17,22 @@
 
 @synthesize categoryCommentary;
 @synthesize categoryImage;
-@synthesize categoryName;
+@synthesize largeCate;
 
 @synthesize categoryName1; //cate1.m で使用
 @synthesize iPath;
 
 @synthesize idStr;
 
+@synthesize title;
+
+@synthesize cateAry;
+
 
 //synthesize後は初期値を入れて初期化してやる
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     categoryImage = @"";
-    categoryName = @"";
+    
     
     categoryName1 =@"";
     

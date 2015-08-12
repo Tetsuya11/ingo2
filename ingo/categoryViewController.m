@@ -12,6 +12,10 @@
 @interface categoryViewController (){
     NSArray *_fesImages;
     NSArray *_fesName;
+    
+    NSArray *categories;
+    
+    NSArray *_cateAry;
  
     AppDelegate *_appDelegate;
     
@@ -24,21 +28,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSBundle* bundle = [NSBundle mainBundle];
+    //読み込むファイルパスを指定
+    NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
+    
+    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
+    
+    _cateAry =[dic allKeys];
+    NSLog(@"ここはどこだ=%@",_cateAry);
+    
+    
+    
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     
     _appDelegate = [[UIApplication sharedApplication] delegate];
     
-    _fesName = @[@"合コン",@"プログラマー",@"相撲界",@"航空業界",@"大学"];
-                    
-    _fesImages = @[@"goukonn.jpeg",@"pro.jpeg",@"sumou.jpeg",@"CA.jpeg",@"daigaku.jpeg",];
+    // = @[@"合コン",@"プログラマー",@"相撲界",@"航空業界",@"大学"];
+    
+    
+   _fesImages = @[@"goukonn.jpeg",@"pro.jpeg",@"sumou.jpeg",@"CA.jpeg",@"daigaku.jpeg",];
                     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return _fesName.count;//セル行
+    return _cateAry.count;//セル行
 }
 
 
@@ -57,7 +73,7 @@
     
     
     
-    nameLabel.text = _fesName[indexPath.row];
+    nameLabel.text = _cateAry[indexPath.row];
     
     profaileImageView.image = [UIImage imageNamed:_fesImages[indexPath.row]];
     
@@ -71,17 +87,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
     NSLog(@"タップ");
+    
+    _appDelegate.cateAry =_cateAry[indexPath.row];
+    
+    NSLog(@"ついにきた=%@",_appDelegate.cateAry);
+    
     // AppDelegateのcategoryNameに値を渡します。
-    _appDelegate.categoryName = _fesName[indexPath.row];
-    
-    NSLog(@"まじか＝%@",_appDelegate.categoryName);
-    
-    _appDelegate.categoryImage = _fesImages[indexPath.row];
+//    _appDelegate.categoryName = _fesName[indexPath.row];
+//    
+//    NSLog(@"まじか＝%@",_appDelegate.categoryName);
+       _appDelegate.categoryImage = _fesImages[indexPath.row];
     
     _appDelegate.iPath = (int)indexPath.row;//テーブルの何番目かをipathに入れている　ここが押されるとDetail mへ
     NSLog(@"とは%@",indexPath);
+   
+    _appDelegate.largeCate = categories[indexPath.row];
+
+    NSLog(@"なんでだろ〜%@",_appDelegate.largeCate);
     
-}        //左右で型が違う為、indexPathをint型に変換
+    
+}
+//左右で型が違う為、indexPathをint型に変換
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

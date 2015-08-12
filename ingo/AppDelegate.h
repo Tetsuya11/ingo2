@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-NSString *categoryName;
+NSString *largeCate;
+    
 NSString *categoryImage;
 NSArray *categoryCommentary;
 
@@ -17,11 +18,16 @@ NSString *categoryName1;
     
 NSString *idStr;
     
-
+NSString *title;
+    
+    NSString *cateAry;
+    
 int iPath;
+    
+
 }
 
-@property (nonatomic,strong) NSString *categoryName;
+@property (nonatomic,strong) NSString *largeCate;
 @property (nonatomic,strong) NSString *categoryImage;
 @property (nonatomic,strong) NSArray *categoryCommentary;
 
@@ -38,6 +44,10 @@ int iPath;
 @property (strong,nonatomic)NSString *arr2;
 
 @property (nonatomic,assign) int iPath2;
+
+@property (strong,nonatomic)NSString *title;
+
+@property (nonatomic,strong) NSString *cateAry;
 
 
 @end

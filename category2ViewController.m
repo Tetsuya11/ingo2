@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface category2ViewController (){
-    AppDelegate *_appDelegate;
+    AppDelegate *_appDelegate;//デリゲート
 }
 
 @end
@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //NSLog(@"カテゴリーの中身=%@",_appDelegate.categoryName);//プロパティアクセス
+   
     
     
     _appDelegate = [[UIApplication sharedApplication] delegate];//初期化
@@ -30,16 +32,26 @@
     NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
     
     NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
-    ::
+ 
     NSString *cate2 =@"";
     
+
     
-    
-    //self.title = _appDelegate.categoryImage;
+    self.title = _appDelegate.categoryName1;//上のタイトル
     
     self.profaileImageView.image = [UIImage imageNamed:_appDelegate.categoryImage];
     
-    self.myTaxtLabel.text =_appDelegate.categoryCommentary[_appDelegate.iPath2];
+//    self.myTaxtLabel.text =_appDelegate.largeCate_appDelegate.categoryName1;
+    
+    self.myTaxtLabel.text = dic[_appDelegate.largeCate][_appDelegate.categoryName1];
+    
+   
+    
+    NSLog(@"lageCateの中身 = %@",_appDelegate.largeCate);//NGここには合コン、航空業界などを入れる
+   
+    NSLog(@"cateName1 = %@",_appDelegate.categoryName1); //ok
+    
+    NSLog(@"dic中身=%@",dic[_appDelegate.largeCate][_appDelegate.categoryName1]);
     
     //self.myTaxtLabel.text = [_appDelegate.iPath2];
     //NSLog(@"なんだと=%@",_appDelegate.iPath2);
