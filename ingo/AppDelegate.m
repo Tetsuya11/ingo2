@@ -8,12 +8,17 @@
 
 #import "AppDelegate.h"
 
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+@synthesize categoryName;
+
+
+
+
 
 @synthesize categoryCommentary;
 @synthesize categoryImage;
@@ -35,8 +40,7 @@
     
     
     categoryName1 =@"";
-    
-    //categoryCommentary = @[@"マンゴー",@"行こうよ",@"ハナちゃん",@"D",@"らん"];
+   
     return YES;
 }
 

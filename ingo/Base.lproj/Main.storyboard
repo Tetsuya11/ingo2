@@ -110,7 +110,7 @@
             </objects>
             <point key="canvasLocation" x="1837.5" y="-489.5"/>
         </scene>
-        <!--Category View Controller-->
+        <!--Categories-->
         <scene sceneID="rLp-FB-gy8">
             <objects>
                 <viewController id="sPV-1c-62c" customClass="categoryViewController" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="huv-rl-9FM"/>
+                    <navigationItem key="navigationItem" title="Categories" id="huv-rl-9FM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="gNk-pC-HRn" id="nAY-Bb-95F"/>

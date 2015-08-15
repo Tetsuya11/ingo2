@@ -17,12 +17,13 @@ NSArray *_categoryName1;
 NSArray *arr2;
 
 AppDelegate *_appDelegate;
+    
+    NSDictionary *_ary;
 
 //NSArray *categories;
    
-    
-    
 }
+
 @end
 
 @implementation category1ViewController
@@ -35,12 +36,17 @@ AppDelegate *_appDelegate;
     
     _appDelegate = [[UIApplication sharedApplication]delegate];
     
-    
     NSBundle* bundle = [NSBundle mainBundle];
     //読み込むファイルパスを指定
     NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
     
     NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
+    
+    NSLog(@"まずは=%@",[dic allKeys]);
+    
+    //NSLog(@"まずはます=%@",[dic allKeys][indexPath.row]);
+
+    //NSLog(@"難しいですね=%@",mazu[indexPath.row]);
     
     NSString *cate = @""; //*tstの空箱
 
@@ -59,63 +65,23 @@ AppDelegate *_appDelegate;
     //categories =[dic allKeys];//オールキーズはアレーで返す
     
     //NSLog(@"配列=%@",categories);
-    NSLog(@"ここは　＝　(int)%@",dic[cate]);
-    
-    NSLog(@"わけわからん=%@",dic[cate][@"ゴッホ"]);
-    
-    NSLog(@"わけわからんくなってきた=%@",[dic[cate] allKeys]);
-    NSLog(@"がんばれ=%@",[dic[cate] allKeys]);
-
-
-    
-//    NSString *goukon = @"合コン";
-//    
-//    NSLog(@"全件 = %@",dic);
-//    NSLog(@"合コン用語 = %@",dic[goukon]);
-//    
-//    NSString *seki = @"関ヶ原";
-//    NSString *cate = @"";
-//   
- //   NSLog(@"%@",dic[cate][seki]);
-//    
-//    NSLog(@"合コンのkey = %@",[dic[goukon] allKeys]);
-//
-    //_appDelegate.arr =dic[cate][@"関ヶ原"];
     
    arr2 =dic[cate];
     
-//    NSLog(@"なんじゃ=%@",_appDelegate.arr);
-//    NSLog(@"おい=%@",arr2);
-//    NSLog(@"おいおい=%@",[dic[cate] allKeys]);
-//    NSLog(@"おいおいおい=%@",[dic[cate] allKeys][0]);
-//    NSString *oi =[dic[cate] allKeys][0];
-//    NSLog(@"おいおいおいおい=%@",[dic[cate] allKeys][1]);
-    
-    //NSLog(@"おいおいおいお=%@",[dic[cate] allKeys[0]])
-//    NSLog(@"なゃ=%@",arr[0]);
-    
-    
-    NSArray *ary =[dic[cate] allKeys];
-   
+ _ary =[dic[cate] allKeys];
     
    
-                                            NSLog(@"何入ってんだ=%@",ary);
+    NSLog(@"何入ってんだ=%@",_ary);
     
-    for (int i = 0; i < ary.count; i++) {
-        NSLog(@"ary %i = %@", i,ary[i]);
+    for (int i = 0; i < _ary.count; i++) {
+   //     NSLog(@"ary %i = %@", i,_ary[i]);
     
     }
     
-//    NSLog(@"キーのary = %@",ary[1]);
-//
-    _categoryName1 = ary;
+
+    _categoryName1 = _ary;
     
     NSLog(@"中身は=%@",_categoryName1);
-//    
-//    NSLog(@"ary%@",_categoryName1);
-//    
-
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView
@@ -139,7 +105,7 @@ numberOfRowsInSection:(NSInteger)section
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
     
     
-    nameLabel.text = _categoryName1[indexPath.row];
+    nameLabel.text = _categoryName1[indexPath.row][@"用語"];
     
     NSLog(@"なんか変です=%@",_categoryName1);
 
@@ -163,10 +129,6 @@ numberOfRowsInSection:(NSInteger)section
     
             NSLog(@"インデックスパスとは%li",(long)indexPath.row);
     
-    //NSLog(@"大カテゴリ選択時 largeCate = %@",categories[indexPath.row]);
-   
-    //_appDelegate.largeCate = categories[indexPath.row];
-     
 }
 
     - (void)didReceiveMemoryWarning {

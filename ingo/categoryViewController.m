@@ -10,15 +10,12 @@
 #import "AppDelegate.h"
 
 @interface categoryViewController (){
-    NSArray *_fesImages;
-    NSArray *_fesName;
-    
-    NSArray *categories;
-    
-    NSArray *_cateAry;
  
     AppDelegate *_appDelegate;
     
+    NSDictionary *_dic;
+    
+    NSArray *_ary;
 }
 
 @end
@@ -28,58 +25,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource= self;
+    _appDelegate = [[UIApplication sharedApplication] delegate];//初期化
+    
     NSBundle* bundle = [NSBundle mainBundle];
     //読み込むファイルパスを指定
     NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
     
-    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
+    _dic = [NSDictionary dictionaryWithContentsOfFile:path];//大元なんでDctionary型
+    NSLog(@"dic=%@",_dic);
+    _ary = [_dic allKeys]; //カテゴリーの表示のみであればこれで表示可能
+    NSLog(@"ary =%@",_ary);//array型でキーのみ取得
     
-    _cateAry =[dic allKeys];
-    NSLog(@"ここはどこだ=%@",_cateAry);
-    for(int i=0;i<_cateAry.count;i++){
-        NSLog(@"カテゴリー%@",_cateAry[i]);
+    for (int i = 0; i < _ary.count; i++){
+        NSLog(@"ary : %i =%@",i,_ary[i]);
+        NSLog(@"ary[i]=%@",_ary[i]);
+        NSLog(@"ary[i] dic有=%@",_dic[_ary[i]]);
+        NSDictionary *detailKey =_dic[_ary[i]];//画像の表示をさせる為にもDictionary型で全体図を作る
+        NSLog(@"画像表示=%@",detailKey);
+        
     }
-    
-    
-    
-    self.myTableView.delegate = self;
-    self.myTableView.dataSource = self;
-    
-    _appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    // = @[@"合コン",@"プログラマー",@"相撲界",@"航空業界",@"大学"];
-    
-    
-   _fesImages = @[@"goukonn.jpeg",@"pro.jpeg",@"sumou.jpeg",@"CA.jpeg",@"daigaku.jpeg",];
-                    
-}
+  }
 
 -(NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return _cateAry.count;//セル行
+    return _ary.count;//セル行
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
-    UIImageView *profaileImageView = (UIImageView *)[cell viewWithTag:1];
     
+    nameLabel.text = _ary[indexPath.row];
     
+    UIImageView *profaileImageView = (UIImageView *)[cell viewWithTag:1];//celの番号
     
-    nameLabel.text = _cateAry[indexPath.row];
-    
-    profaileImageView.image = [UIImage imageNamed:_fesImages[indexPath.row]];
-    
+    profaileImageView.image = [UIImage imageNamed:_dic[_ary[indexPath.row]][@"画像名"]];
     
     profaileImageView.clipsToBounds = YES;
     profaileImageView.layer.cornerRadius = 22.0f;
@@ -91,31 +80,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
     NSLog(@"タップ");
     
-    _appDelegate.cateAry =_cateAry[indexPath.row];
+    NSDictionary *dataDictionary = _dic[_ary[indexPath.row]];//Dectionary型に大元のDic[dictionary型]、array型keyを入れる(何番が押されたかはindexPathで)
+    NSLog(@"dataDictionary=%@",dataDictionary[@"用語"]);
     
-    NSLog(@"ついにきた=%@",_appDelegate.cateAry);
-    
-    // AppDelegateのcategoryNameに値を渡します。
-//    _appDelegate.categoryName = _fesName[indexPath.row];
-//    
-//    NSLog(@"まじか＝%@",_appDelegate.categoryName);
-       _appDelegate.categoryImage = _fesImages[indexPath.row];
-    
-    _appDelegate.iPath = (int)indexPath.row;//テーブルの何番目かをipathに入れている　ここが押されるとDetail mへ
-    NSLog(@"とは%@",indexPath);
-   
-    _appDelegate.largeCate = categories[indexPath.row];
+    AppDelegate *appDelete = [[UIApplication sharedApplication] delegate];//?????????????????
+    appDelete.categoryName = _dic[_ary[indexPath.row]];
 
-    NSLog(@"なんでだろ〜%@",_appDelegate.largeCate);
-    
-    
+
 }
-//左右で型が違う為、indexPathをint型に変換
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-   
-}
-
-
 @end

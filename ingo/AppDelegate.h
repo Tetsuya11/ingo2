@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
+
+NSString *categoryName;
+
+    
 NSString *largeCate;
     
 NSString *categoryImage;
@@ -20,12 +24,22 @@ NSString *idStr;
     
 NSString *title;
     
-    NSString *cateAry;
-    
+NSString *cateAry;//cateで定義
+
+NSString *mada;
+
+NSString *mainImage;
+
 int iPath;
+
+NSDictionary *_dic;
     
 
 }
+@property (nonatomic,strong) NSString *categoryName;
+
+
+
 
 @property (nonatomic,strong) NSString *largeCate;
 @property (nonatomic,strong) NSString *categoryImage;
@@ -49,6 +63,9 @@ int iPath;
 
 @property (nonatomic,strong) NSString *cateAry;
 
+@property (strong,nonatomic)NSString *mainImage;
+
+@property (nonatomic,strong)NSDictionary *_dic;
 
 @end
 
