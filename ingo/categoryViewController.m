@@ -66,6 +66,8 @@
     
     nameLabel.text = _ary[indexPath.row];
     
+    
+    
     UIImageView *profaileImageView = (UIImageView *)[cell viewWithTag:1];//celの番号
     
     profaileImageView.image = [UIImage imageNamed:_dic[_ary[indexPath.row]][@"画像名"]];
@@ -80,12 +82,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
     NSLog(@"タップ");
     
+    
     NSDictionary *dataDictionary = _dic[_ary[indexPath.row]];//Dectionary型に大元のDic[dictionary型]、array型keyを入れる(何番が押されたかはindexPathで)
     NSLog(@"dataDictionary=%@",dataDictionary[@"用語"]);
-    
-    AppDelegate *appDelete = [[UIApplication sharedApplication] delegate];//?????????????????
-    appDelete.categoryName = _dic[_ary[indexPath.row]];
-
-
+    NSLog(@"_dic[_ary[indexPath.row] = %@",_dic[_ary[indexPath.row]]);
+    _appDelegate.categoryName = _ary[indexPath.row];
+        
+    NSLog(@"_appDelegate.categoryName中身=%@",_appDelegate.categoryName);
 }
 @end

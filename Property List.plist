@@ -21,31 +21,23 @@
 		<key>カテゴリ名</key>
 		<string>プログラマー</string>
 	</dict>
-	<key>相撲界</key>
+	<key>大学</key>
 	<dict>
 		<key>用語</key>
 		<dict>
-			<key>ハコテ</key>
+			<key>大学生</key>
 			<dict>
 				<key>詳細</key>
-				<string>卑怯な手を平然と使う</string>
-				<key>画像名</key>
-				<string>hako.jpg</string>
-				<key>用語名</key>
-				<string>ハコテ</string>
+				<string>大学生だよ</string>
 			</dict>
 		</dict>
 		<key>画像名</key>
-		<string>sumou.jpeg</string>
+		<string>daigaku.jpeg</string>
 		<key>カテゴリ名</key>
-		<string>相撲界</string>
+		<string>大学</string>
 	</dict>
 	<key>合コン</key>
 	<dict>
-		<key>画像名</key>
-		<string>goukonn.jpeg</string>
-		<key>カテゴリ名</key>
-		<string>合コン</string>
 		<key>用語</key>
 		<dict>
 			<key>ゴッホ</key>
@@ -67,6 +59,10 @@
 				<string>関ヶ原</string>
 			</dict>
 		</dict>
+		<key>画像名</key>
+		<string>goukonn.jpeg</string>
+		<key>カテゴリ名</key>
+		<string>合コン</string>
 	</dict>
 	<key>航空業界</key>
 	<dict>
@@ -82,17 +78,24 @@
 		<key>カテゴリ名</key>
 		<string>航空業界</string>
 	</dict>
-	<key>大学</key>
+	<key>相撲界</key>
 	<dict>
 		<key>用語</key>
 		<dict>
-			<key>大学生</key>
-			<string>大学生だよ</string>
+			<key>ハコテ</key>
+			<dict>
+				<key>詳細</key>
+				<string>卑怯な手を平然と使う</string>
+				<key>画像名</key>
+				<string>hako.jpg</string>
+				<key>用語名</key>
+				<string>ハコテ</string>
+			</dict>
 		</dict>
 		<key>画像名</key>
-		<string>daigaku.jpeg</string>
+		<string>sumou.jpeg</string>
 		<key>カテゴリ名</key>
-		<string>大学</string>
+		<string>相撲界</string>
 	</dict>
 </dict>
 </plist>

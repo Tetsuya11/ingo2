@@ -1,4 +1,4 @@
-//
+////
 //  category1ViewController.m
 //  ingo
 //
@@ -10,18 +10,22 @@
 #import "AppDelegate.h"
 
 
+
 @interface category1ViewController (){
     
-NSArray *_categoryName1;
+NSDictionary *_largDic;
+    
+NSArray *_categoryAry;
+    
+NSDictionary*_dic;
+    
+NSArray *_ary;
+    
+NSArray *_wordDict;
     
 NSArray *arr2;
 
 AppDelegate *_appDelegate;
-    
-    NSDictionary *_ary;
-
-//NSArray *categories;
-   
 }
 
 @end
@@ -36,104 +40,46 @@ AppDelegate *_appDelegate;
     
     _appDelegate = [[UIApplication sharedApplication]delegate];
     
+    NSString *testCategory = _appDelegate.categoryName;//前ページで作ったやつ
+    NSLog(@"testCateoryの中身 = %@", testCategory);
+    
     NSBundle* bundle = [NSBundle mainBundle];
-    //読み込むファイルパスを指定
+  
     NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
     
-    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
+    _dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
     
-    NSLog(@"まずは=%@",[dic allKeys]);
     
-    //NSLog(@"まずはます=%@",[dic allKeys][indexPath.row]);
-
-    //NSLog(@"難しいですね=%@",mazu[indexPath.row]);
+    _wordDict= [_dic[_appDelegate.categoryName][@"用語"] allKeys];
     
-    NSString *cate = @""; //*tstの空箱
-
-    if(_appDelegate.iPath == 0){
-        cate = @"合コン";
-    }else if(_appDelegate.iPath == 1){
-        cate = @"プログラマー";
-    }else if(_appDelegate.iPath == 2){
-        cate = @"相撲界";
-    }else if(_appDelegate.iPath == 3){
-        cate = @"航空業界";
-    }else if(_appDelegate.iPath == 4){
-        cate =@"大学";
-    }
+    NSLog(@"_wordDict=%@",_wordDict);
     
-    //categories =[dic allKeys];//オールキーズはアレーで返す
     
-    //NSLog(@"配列=%@",categories);
-    
-   arr2 =dic[cate];
-    
- _ary =[dic[cate] allKeys];
-    
+    NSLog(@"用語のみ=%@",_dic[_appDelegate.categoryName][@"用語"]);
    
-    NSLog(@"何入ってんだ=%@",_ary);
-    
-    for (int i = 0; i < _ary.count; i++) {
-   //     NSLog(@"ary %i = %@", i,_ary[i]);
-    
     }
-    
 
-    _categoryName1 = _ary;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _wordDict.count;
     
-    NSLog(@"中身は=%@",_categoryName1);
 }
-
--(NSInteger)tableView:(UITableView *)tableView
-numberOfRowsInSection:(NSInteger)section
-{
-   return _categoryName1.count;//セル行
-   // return 20;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-    
-    
-    nameLabel.text = _categoryName1[indexPath.row][@"用語"];
-    
-    NSLog(@"なんか変です=%@",_categoryName1);
-
-  
-    
+    //    cell.textLabel.text = [NSString stringWithFormat:@"行 = %ld",(long)indexPath.row];
+    cell.textLabel.text = _wordDict[indexPath.row];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
-    NSLog(@"タップしよ");
     
-   // NSLog(@"こここk=%@",arr2);
-    
-    NSLog(@"_cate1 = %@",_categoryName1[indexPath.row]);
-    
-    _appDelegate.categoryName1 =_categoryName1[indexPath.row];
-    
-            NSLog(@"入ってないだと=%@",_categoryName1);//ゴッホ
-    
-     _appDelegate.iPath2 = (int)indexPath.row;//テーブルの何番目かをipathに入れている　押されるとDetail mへ
-    
-            NSLog(@"インデックスパスとは%li",(long)indexPath.row);
-    
-}
-
-    - (void)didReceiveMemoryWarning {
-        [super didReceiveMemoryWarning];
-        
-    }
-
+//            // UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+//            
+//            // nameLabel.text = _wordDict[indexPath.row];
+//            cell.textLabel.text = [_dic[_appDelegate.categoryName][@"用語"] allKeys][indexPath.row];
+//            NSLog(@"中身は=%@",[_dic[_appDelegate.categoryName][@"用語"] allKeys]);
+//        }
+//        return cell;
 @end

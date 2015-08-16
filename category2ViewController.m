@@ -22,7 +22,6 @@
     //NSLog(@"カテゴリーの中身=%@",_appDelegate.categoryName);//プロパティアクセス
    
     
-    
     _appDelegate = [[UIApplication sharedApplication] delegate];//初期化
     NSLog(@"トモを呼び出す=%@",_appDelegate.categoryName1);
     

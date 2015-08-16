@@ -10,7 +10,4 @@
 
 @interface category2ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *profaileImageView;
-
-@property (weak, nonatomic) IBOutlet UILabel *myTaxtLabel;
 @end
