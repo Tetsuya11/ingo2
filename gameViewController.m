@@ -8,7 +8,15 @@
 
 #import "gameViewController.h"
 
-@interface gameViewController ()
+@interface gameViewController (){
+    NSDictionary *_dic;
+    
+    NSDictionary *_detailDic;
+    
+    NSArray *omikujiList;
+    int rNum;
+    NSString *_ary;
+}
 
 @end
 
@@ -16,22 +24,72 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSBundle* bundle = [NSBundle mainBundle];
+    
+    NSString* path = [bundle pathForResource:@"quiz" ofType:@"plist"];
+    
+    _dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    NSArray *array = [_dic allKeys];
+    NSLog(@"arrayの中身=%@",array);
+
+    int random_nummber;
+    random_nummber = rand();
+    
+    for(int i=0; i <array.count; i++){
+        int random_number;
+
+        random_number = arc4random() % 2;//0～9の数値をランダムに取得
+
+        //NSLog(@"random_number%d", random_number);
+        int rNum = random_number;
+        NSLog(@"random_numberを出します=%d",rNum);
+        NSLog(@"rNum =%d",array[rNum]);
+        _ary =array[rNum];
+        
+        
+    }
+    
+    NSLog(@"_dicの中身を先ずは見る=%@",[_dic[@"問題１"]allKeys]);
+    NSArray *ary = [_dic allKeys];
+    
+    
+    for (int i = 0; i < ary.count; i++){
+        NSLog(@"aryの中身を確認=%@",ary[i]);
+        _detailDic = _dic[ary[i]];
+        NSLog(@"選択１まで出す=%@",_detailDic);
+        
+    }
+
+    self.myLabel.text =_dic[_ary][@"問題"];
+    
+    [self.select1 setTitle:_dic[@"問題１"][@"選択"][@"選択1"]forState:UIControlStateNormal];
+    
+    [self.select2 setTitle:_dic[@"問題１"][@"選択"][@"選択2"]
+        forState:UIControlStateNormal];
+    NSLog(@"問題２だけ出ないけど中身なんだ=%@",_dic[@"問題１"][@"選択"][@"選択2"]);
+
+    [self.select3 setTitle:_dic[@"問題１"][@"選択"][@"選択3"]forState:UIControlStateNormal];
+
+    [self.select4 setTitle:_dic[@"問題１"][@"選択"][@"選択4"]forState:UIControlStateNormal];
+    
+    self.myImage.image = [UIImage imageNamed:_dic[@"問題１"][@"画像"]];
+
+    
+
+    
+
+}
+- (IBAction)selectBtn1:(id)sender {
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)selectBtn2:(id)sender {
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)selectBtn3:(id)sender {
 }
-*/
+
+- (IBAction)selectBtn4:(id)sender {
+}
 
 @end

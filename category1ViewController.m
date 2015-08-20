@@ -19,6 +19,8 @@ NSArray *_categoryAry;
     
 NSDictionary*_dic;
     
+
+    
 NSArray *_ary;
     
 NSArray *_wordDict;
@@ -45,7 +47,7 @@ AppDelegate *_appDelegate;
     
     NSBundle* bundle = [NSBundle mainBundle];
   
-    NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
+    NSString* path = [bundle pathForResource:@"Category" ofType:@"plist"];
     
     _dic = [NSDictionary dictionaryWithContentsOfFile:path];//読み込み?
     
@@ -74,12 +76,16 @@ AppDelegate *_appDelegate;
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {//押された瞬間
+    _appDelegate.detail = [_dic[_appDelegate.categoryName][@"用語"]allKeys][indexPath.row];
     
-//            // UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-//            
-//            // nameLabel.text = _wordDict[indexPath.row];
-//            cell.textLabel.text = [_dic[_appDelegate.categoryName][@"用語"] allKeys][indexPath.row];
-//            NSLog(@"中身は=%@",[_dic[_appDelegate.categoryName][@"用語"] allKeys]);
-//        }
-//        return cell;
+    NSLog(@"detail =%@",_appDelegate.detail);
+    
+    
+    
+    
+        
+}
+
+
 @end

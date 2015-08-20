@@ -38,6 +38,9 @@ NSDictionary *_dic;
 }
 @property (nonatomic,strong) NSString *categoryName;
 
+@property (nonatomic,strong) NSString *categorydetail;
+
+@property (nonatomic,strong) NSString *detail;
 
 
 

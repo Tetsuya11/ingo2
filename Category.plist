@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>寿司屋</key>
+	<dict>
+		<key>用語</key>
+		<dict>
+			<key>兄貴</key>
+			<dict>
+				<key>詳細</key>
+				<string>古いネタ</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string>兄貴</string>
+			</dict>
+			<key>New item</key>
+			<string></string>
+		</dict>
+	</dict>
 	<key>プログラマー</key>
 	<dict>
 		<key>用語</key>
@@ -11,7 +28,7 @@
 				<key>詳細</key>
 				<string>みんなで</string>
 				<key>画像名</key>
-				<string>mokumoku.jpg</string>
+				<string>sorede.jpeg</string>
 				<key>用語名</key>
 				<string>もくもく会</string>
 			</dict>
@@ -20,63 +37,6 @@
 		<string>pro.jpeg</string>
 		<key>カテゴリ名</key>
 		<string>プログラマー</string>
-	</dict>
-	<key>大学</key>
-	<dict>
-		<key>用語</key>
-		<dict>
-			<key>大学生</key>
-			<dict>
-				<key>詳細</key>
-				<string>大学生だよ</string>
-			</dict>
-		</dict>
-		<key>画像名</key>
-		<string>daigaku.jpeg</string>
-		<key>カテゴリ名</key>
-		<string>大学</string>
-	</dict>
-	<key>合コン</key>
-	<dict>
-		<key>用語</key>
-		<dict>
-			<key>ゴッホ</key>
-			<dict>
-				<key>画像名</key>
-				<string>gohho.jpg</string>
-				<key>詳細</key>
-				<string>可愛かったなと黄昏ること</string>
-				<key>用語名</key>
-				<string>ゴッホ</string>
-			</dict>
-			<key>関ヶ原</key>
-			<dict>
-				<key>詳細</key>
-				<string>10対10以上の合コン</string>
-				<key>画像名</key>
-				<string>seki.jpg</string>
-				<key>用語名</key>
-				<string>関ヶ原</string>
-			</dict>
-		</dict>
-		<key>画像名</key>
-		<string>goukonn.jpeg</string>
-		<key>カテゴリ名</key>
-		<string>合コン</string>
-	</dict>
-	<key>航空業界</key>
-	<dict>
-		<key>用語</key>
-		<dict>
-			<key>ミラクルフライト</key>
-			<string>搭乗する際には手助けが必要だった年配の乗客が、降りるときは「奇跡的に」車椅子を使う必要がなかったとき</string>
-			<key>スリムクラッカー</key>
-			<string>夜間勤務中に同僚と交流せず一直線にホテルの部屋へ向かって（ドアを「スラム（バタンと閉める）し」）、そのまま朝まで出てこない（鍵を「クリック（カチッと閉める）する」）キャビンアテンダント。</string>
-		</dict>
-		<key>画像名</key>
-		<string>CA.jpeg</string>
-		<key>カテゴリ名</key>
-		<string>航空業界</string>
 	</dict>
 	<key>相撲界</key>
 	<dict>
@@ -96,6 +56,77 @@
 		<string>sumou.jpeg</string>
 		<key>カテゴリ名</key>
 		<string>相撲界</string>
+	</dict>
+	<key>合コン</key>
+	<dict>
+		<key>用語</key>
+		<dict>
+			<key>ゴッホ</key>
+			<dict>
+				<key>画像名</key>
+				<string>gohho.jpg</string>
+				<key>詳細</key>
+				<string>可愛かったなと黄昏ること</string>
+				<key>用語名</key>
+				<string>ゴッホ</string>
+			</dict>
+			<key>関ヶ原</key>
+			<dict>
+				<key>画像名</key>
+				<string>seki.jpg</string>
+				<key>詳細</key>
+				<string>10対10以上の合コン</string>
+				<key>用語名</key>
+				<string>関ヶ原</string>
+			</dict>
+		</dict>
+		<key>画像名</key>
+		<string>goukonn.jpeg</string>
+		<key>カテゴリ名</key>
+		<string>合コン</string>
+	</dict>
+	<key>航空業界</key>
+	<dict>
+		<key>用語</key>
+		<dict>
+			<key>ミラクルフライト</key>
+			<dict>
+				<key>画像名</key>
+				<string>jpr</string>
+				<key>詳細</key>
+				<string>jpeg</string>
+				<key>用語名</key>
+				<string>ミラクルフライト</string>
+			</dict>
+			<key>スリムクラッカー</key>
+			<dict>
+				<key>画像名</key>
+				<string>.jpeg</string>
+				<key>詳細</key>
+				<string>すぐに</string>
+				<key>用語名</key>
+				<string>スリムクラッカー</string>
+			</dict>
+		</dict>
+		<key>画像名</key>
+		<string>CA.jpeg</string>
+		<key>カテゴリ名</key>
+		<string>航空業界</string>
+	</dict>
+	<key>大学</key>
+	<dict>
+		<key>用語</key>
+		<dict>
+			<key>大学生</key>
+			<dict>
+				<key>詳細</key>
+				<string>大学生だよ</string>
+			</dict>
+		</dict>
+		<key>画像名</key>
+		<string>daigaku.jpeg</string>
+		<key>カテゴリ名</key>
+		<string>大学</string>
 	</dict>
 </dict>
 </plist>

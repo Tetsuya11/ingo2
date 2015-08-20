@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>問題２</key>
+	<dict>
+		<key>画像</key>
+		<string></string>
+		<key>問題</key>
+		<string>奇跡的に手助けいらないフライト</string>
+		<key>選択</key>
+		<dict>
+			<key>選択１</key>
+			<string>幹事MAXの法則</string>
+			<key>選択２</key>
+			<string>スリムクラッカー</string>
+			<key>選択３</key>
+			<string>兄貴</string>
+			<key>選択４</key>
+			<string>関ヶ原</string>
+		</dict>
+	</dict>
+	<key>問題１</key>
+	<dict>
+		<key>画像</key>
+		<string>CA.jpeg</string>
+		<key>問題</key>
+		<string>卑怯な手を使う</string>
+		<key>選択</key>
+		<dict>
+			<key>選択1</key>
+			<string>幹事MAXの法則</string>
+			<key>選択2</key>
+			<string>スリムフリッカー</string>
+			<key>選択3</key>
+			<string>ハコテ</string>
+			<key>選択4</key>
+			<string>ゴッホ</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface category2ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *myImage;
 
+@property (weak, nonatomic) IBOutlet UITextView *myText;
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
 @end

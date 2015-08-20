@@ -31,7 +31,7 @@
     
     NSBundle* bundle = [NSBundle mainBundle];
     //読み込むファイルパスを指定
-    NSString* path = [bundle pathForResource:@"Property List" ofType:@"plist"];
+    NSString* path = [bundle pathForResource:@"Category" ofType:@"plist"];
     
     _dic = [NSDictionary dictionaryWithContentsOfFile:path];//大元なんでDctionary型
     NSLog(@"dic=%@",_dic);
