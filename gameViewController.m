@@ -16,6 +16,8 @@
     NSArray *omikujiList;
     int rNum;
     NSString *_ary;
+    
+   
 }
 
 @end
@@ -30,7 +32,9 @@
     
     _dic = [NSDictionary dictionaryWithContentsOfFile:path];
     
-    NSArray *array = [_dic allKeys];
+    
+    
+    NSArray *array = [_dic allKeys];//全体
     NSLog(@"arrayの中身=%@",array);
 
     int random_nummber;
@@ -61,19 +65,20 @@
         
     }
 
-    self.myLabel.text =_dic[_ary][@"問題"];
+    self.myLabel.text =_dic[_ary][@"問題"];//ランダム取得
+    NSLog(@"調べる=%@",_dic[_ary][@"選択"][@"選択1"]);
     
-    [self.select1 setTitle:_dic[@"問題１"][@"選択"][@"選択1"]forState:UIControlStateNormal];
+    [self.select1 setTitle:_dic[_ary][@"選択"][@"選択1"]forState:UIControlStateNormal];
     
-    [self.select2 setTitle:_dic[@"問題１"][@"選択"][@"選択2"]
-        forState:UIControlStateNormal];
-    NSLog(@"問題２だけ出ないけど中身なんだ=%@",_dic[@"問題１"][@"選択"][@"選択2"]);
+      NSLog(@"奇跡的に、の時のみ１が出ないので確認、=%@",_dic[_ary][@"選択"][@"選択1"]);
+    
+    [self.select2 setTitle:_dic[_ary][@"選択"][@"選択2"]forState:UIControlStateNormal];
+    
+    [self.select3 setTitle:_dic[_ary][@"選択"][@"選択3"]forState:UIControlStateNormal];
 
-    [self.select3 setTitle:_dic[@"問題１"][@"選択"][@"選択3"]forState:UIControlStateNormal];
-
-    [self.select4 setTitle:_dic[@"問題１"][@"選択"][@"選択4"]forState:UIControlStateNormal];
+    [self.select4 setTitle:_dic[_ary][@"選択"][@"選択4"]forState:UIControlStateNormal];
     
-    self.myImage.image = [UIImage imageNamed:_dic[@"問題１"][@"画像"]];
+    self.myImage.image = [UIImage imageNamed:_dic[_ary][@"画像"]];
 
     
 
