@@ -28,6 +28,7 @@
 		9775A03A1B725A9F008DC902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9775A0381B725A9F008DC902 /* Main.storyboard */; };
 		9775A03D1B726166008DC902 /* category1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9775A03C1B726166008DC902 /* category1ViewController.m */; };
 		9775A03F1B732CC7008DC902 /* Category.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9775A03E1B732CC7008DC902 /* Category.plist */; };
+		97C05A971B89F90A00F0F90C /* Marina.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97C05A961B89F90A00F0F90C /* Marina.jpeg */; };
 		97D00E181B81A9B00026BB9B /* e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97D00E171B81A9B00026BB9B /* e.jpg */; };
 		97D00E301B81BC000026BB9B /* ukiyoe.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 97D00E2F1B81BC000026BB9B /* ukiyoe.jpeg */; };
 		97D00E321B81C6EB0026BB9B /* quiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97D00E311B81C6EB0026BB9B /* quiz.plist */; };
@@ -81,6 +82,7 @@
 		9775A03B1B726166008DC902 /* category1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = category1ViewController.h; path = ../category1ViewController.h; sourceTree = "<group>"; };
 		9775A03C1B726166008DC902 /* category1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = category1ViewController.m; path = ../category1ViewController.m; sourceTree = "<group>"; };
 		9775A03E1B732CC7008DC902 /* Category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Category.plist; path = ../Category.plist; sourceTree = "<group>"; };
+		97C05A961B89F90A00F0F90C /* Marina.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Marina.jpeg; path = images/Marina.jpeg; sourceTree = SOURCE_ROOT; };
 		97D00E171B81A9B00026BB9B /* e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "\be.jpg"; path = "images/\be.jpg"; sourceTree = SOURCE_ROOT; };
 		97D00E2F1B81BC000026BB9B /* ukiyoe.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ukiyoe.jpeg; path = images/ukiyoe.jpeg; sourceTree = SOURCE_ROOT; };
 		97D00E311B81C6EB0026BB9B /* quiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quiz.plist; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		9721038B1B6A854F0007819B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				97C05A961B89F90A00F0F90C /* Marina.jpeg */,
 				97D00E191B81BBE80026BB9B /* ingo */,
 				97D00E171B81A9B00026BB9B /* e.jpg */,
 				972788A41B807AD10054AD62 /* sorede.jpeg */,
@@ -315,6 +318,7 @@
 				97D00E301B81BC000026BB9B /* ukiyoe.jpeg in Resources */,
 				9775A03F1B732CC7008DC902 /* Category.plist in Resources */,
 				9775A0361B7256FC008DC902 /* pro.jpeg in Resources */,
+				97C05A971B89F90A00F0F90C /* Marina.jpeg in Resources */,
 				97759FB91B70FBBB008DC902 /* sho2.jpg in Resources */,
 				9775A0331B7256FC008DC902 /* CA.jpeg in Resources */,
 				9775A03A1B725A9F008DC902 /* Main.storyboard in Resources */,

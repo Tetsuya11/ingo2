@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface gameViewController : UIViewController
+
+@interface gameViewController : UIViewController{
+
+}
+
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *myImage;
 
 @property (weak, nonatomic) IBOutlet UIButton *select1;
-- (IBAction)selectBtn1:(id)sender;
+- (IBAction)selectBtn1:(id)sender;//これが正解
 
 @property (weak, nonatomic) IBOutlet UIButton *select2;
 - (IBAction)selectBtn2:(id)sender;
@@ -24,6 +28,14 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *select4;
 - (IBAction)selectBtn4:(id)sender;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *myCorect;
+
+@property (weak, nonatomic) IBOutlet UILabel *myFault;
+
+@property (weak, nonatomic) IBOutlet UILabel *myTotal;
 
 
 @end

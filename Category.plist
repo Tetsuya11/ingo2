@@ -2,35 +2,133 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>寿司屋</key>
+	<key>Marina</key>
 	<dict>
 		<key>用語</key>
 		<dict>
-			<key>兄貴</key>
+			<key>ボブる</key>
 			<dict>
 				<key>詳細</key>
-				<string>古いネタ</string>
+				<string>ボブとモーテルに行くこと</string>
 				<key>画像名</key>
 				<string></string>
 				<key>用語名</key>
-				<string>兄貴</string>
+				<string></string>
 			</dict>
-			<key>New item</key>
-			<string></string>
+			<key>ボブ待ち</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>コブル</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>BOB</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
 		</dict>
+		<key>画像名</key>
+		<string>Marina.jpeg</string>
+		<key>カテゴリ名</key>
+		<string>Marina</string>
 	</dict>
-	<key>プログラマー</key>
+	<key>ネット</key>
 	<dict>
 		<key>用語</key>
 		<dict>
-			<key>もくもく会</key>
+			<key>鬼女(きじょ)</key>
 			<dict>
 				<key>詳細</key>
-				<string>みんなで</string>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>kwsk</key>
+			<dict/>
+			<key>ステマ</key>
+			<dict>
+				<key>詳細</key>
+				<string>ステルスマーケティングの略。ステルスマーケティングとは、消費者に宣伝と気づかれない形で行う広報行為のことで、ここ数年で爆発的に使われるようになった。 
+ステルスマーケティングの略。ステルスマーケティングとは、消費者に宣伝と気づかれない形で行う広報行為のことで、ここ数年で爆発的に使われるようになった。 </string>
 				<key>画像名</key>
 				<string>sorede.jpeg</string>
 				<key>用語名</key>
-				<string>もくもく会</string>
+				<string>ステマ</string>
+			</dict>
+			<key>wktk</key>
+			<dict/>
+			<key>gkbr</key>
+			<dict/>
+			<key>ggrks</key>
+			<string></string>
+			<key>New item - 2</key>
+			<string></string>
+			<key>New item</key>
+			<string></string>
+			<key>sneg</key>
+			<dict/>
+			<key>喪女(もじょ)</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>オワコン</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>△</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>ポチる</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>リムる</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
 			</dict>
 		</dict>
 		<key>画像名</key>
@@ -57,55 +155,387 @@
 		<key>カテゴリ名</key>
 		<string>相撲界</string>
 	</dict>
+	<key>寿司屋</key>
+	<dict>
+		<key>用語</key>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>兄貴</key>
+			<dict>
+				<key>詳細</key>
+				<string>古いネタ</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string>兄貴</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>合コン</key>
 	<dict>
 		<key>用語</key>
 		<dict>
+			<key>モンスターハンター</key>
+			<dict>
+				<key>詳細</key>
+				<string>ブスをお持ち帰りすること</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>コロンブス</key>
+			<dict>
+				<key>詳細</key>
+				<string>遠くから合コンにやってきたブス。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>金スマのうしろ</key>
+			<dict>
+				<key>詳細</key>
+				<string>遠くから合コンにやってきたブス。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>デジャブス</key>
+			<dict>
+				<key>詳細</key>
+				<string>2度会ってしまったブス</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>アースマラソン</key>
+			<dict>
+				<key>詳細</key>
+				<string>タクシー代を出してもらえず、走って帰る事。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>アラフォー</key>
+			<dict>
+				<key>詳細</key>
+				<string>4,000円までしか出さない男。財布にいつも4,000円くらいしか入っていない男。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>FBI</key>
+			<dict>
+				<key>詳細</key>
+				<string>ファジーネーブル、ビール、いいちこを一度に注文すること。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>F4</key>
+			<dict>
+				<key>詳細</key>
+				<string>女性4人がファジーネーブル頼む事。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>金梨くん</key>
+			<dict>
+				<key>詳細</key>
+				<string>金のない男。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>UKB48</key>
+			<dict>
+				<key>詳細</key>
+				<string>歌ひろ、カラ館、ビックエコー ３０分 ４８０円</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>工業高校</key>
+			<dict>
+				<key>詳細</key>
+				<string>男子の数が多い合コン</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>校長先生</key>
+			<dict>
+				<key>詳細</key>
+				<string>話が長い＆面白くない。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>サイドブレーキ</key>
+			<dict>
+				<key>詳細</key>
+				<string>誰かがくっつこうとするのを阻止する女</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>中山ひでちゃん</key>
+			<dict>
+				<key>詳細</key>
+				<string>合コンの合間に「ウチくる」を連呼する男</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>ヒマグレン</key>
+			<dict>
+				<key>詳細</key>
+				<string>ニートのカッコイイ言い方</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>プリズンブレイク</key>
+			<dict>
+				<key>詳細</key>
+				<string>女性陣が終電前に帰ろうとし、男性陣がそれを止めようとすること。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>ブスペクト</key>
+			<dict>
+				<key>詳細</key>
+				<string>尊敬できるブス</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>蓮舫</key>
+			<dict>
+				<key>詳細</key>
+				<string>サラダを分けてくれる女子</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>ささやきウーロン</key>
+			<dict>
+				<key>詳細</key>
+				<string>お酒が飲めないのに最初にお酒を注文し、その後小さな声でウーロン茶を注文すること。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>情熱大陸</key>
+			<dict>
+				<key>詳細</key>
+				<string>コンパ中に自分の夢を熱く語るうっとうしい男</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>Tサミット</key>
+			<dict>
+				<key>詳細</key>
+				<string>女子のトイレでの会議のこと</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
 			<key>ゴッホ</key>
 			<dict>
+				<key>詳細</key>
+				<string>合コン中はそこまで気にしてなかったが帰り着いて思い返すと、可愛かったと後悔すること。（※亡くなってから有名になったゴッホにちなんで）</string>
 				<key>画像名</key>
 				<string>gohho.jpg</string>
-				<key>詳細</key>
-				<string>可愛かったなと黄昏ること</string>
 				<key>用語名</key>
 				<string>ゴッホ</string>
 			</dict>
+			<key>ドーピング</key>
+			<dict>
+				<key>詳細</key>
+				<string>みんなに内緒でウコンの力を呑んでくること。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
 			<key>関ヶ原</key>
 			<dict>
+				<key>詳細</key>
+				<string>合計20人以上の大規模な合コン</string>
 				<key>画像名</key>
 				<string>seki.jpg</string>
-				<key>詳細</key>
-				<string>10対10以上の合コン</string>
 				<key>用語名</key>
 				<string>関ヶ原</string>
 			</dict>
+			<key>TNP</key>
+			<dict>
+				<key>詳細</key>
+				<string>頼んでいないピザが来る事</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>幹事MAXの法則</key>
+			<dict>
+				<key>詳細</key>
+				<string>幹事の女の子が一番かわいい。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>イイノガレ明美</key>
+			<dict>
+				<key>詳細</key>
+				<string>明らかに外で男と電話していたのに、戻ったときに「なんでもなーい」と言い逃れする女子のこと。イイノガレ明美には可愛い子率高し。一方で、意味ありげに席をはずし「なんでもなーい」と帰ってくる偽物のイイノガレ明美もいるので見極めが肝心</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>イリュージョン</key>
+			<dict>
+				<key>詳細</key>
+				<string>支払いのときにばっくれること</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>永遠のゼロ</key>
+			<dict>
+				<key>詳細</key>
+				<string>合コン中に行われるゲームで誰からも指名されないこと。</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>血命子（けつめいし）</key>
+			<dict>
+				<key>詳細</key>
+				<string>とりあえず血液型を聞いて勝手に診断してくる女子のこと</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>歳伝説</key>
+			<dict>
+				<key>詳細</key>
+				<string>年齢をあいまいにごまかすので、結局若いのか老けているのかわからない女子のこと</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>いろはす</key>
+			<dict>
+				<key>詳細</key>
+				<string>お水系の仕事、夜系の仕事をしている女子が集まった合コンのこと</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>トイレの神様</key>
+			<dict>
+				<key>詳細</key>
+				<string>トイレで吐いているときに介抱してくれる女子のこと</string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
 		</dict>
 		<key>画像名</key>
-		<string>goukonn.jpeg</string>
+		<string></string>
 		<key>カテゴリ名</key>
-		<string>合コン</string>
+		<string></string>
 	</dict>
 	<key>航空業界</key>
 	<dict>
 		<key>用語</key>
 		<dict>
+			<key>バードストライク</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
 			<key>ミラクルフライト</key>
 			<dict>
-				<key>画像名</key>
-				<string>jpr</string>
 				<key>詳細</key>
 				<string>jpeg</string>
+				<key>画像名</key>
+				<string>jpr</string>
 				<key>用語名</key>
 				<string>ミラクルフライト</string>
 			</dict>
 			<key>スリムクラッカー</key>
 			<dict>
-				<key>画像名</key>
-				<string>.jpeg</string>
 				<key>詳細</key>
 				<string>すぐに</string>
+				<key>画像名</key>
+				<string>.jpeg</string>
 				<key>用語名</key>
 				<string>スリムクラッカー</string>
+			</dict>
+			<key>ダイバート</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>ATB エアターンバック</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
+			</dict>
+			<key>GTB グランドターンバック</key>
+			<dict>
+				<key>詳細</key>
+				<string></string>
+				<key>画像名</key>
+				<string></string>
+				<key>用語名</key>
+				<string></string>
 			</dict>
 		</dict>
 		<key>画像名</key>

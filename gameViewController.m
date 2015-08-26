@@ -14,10 +14,17 @@
     NSDictionary *_detailDic;
     
     NSArray *omikujiList;
-    int rNum;
+    
     NSString *_ary;
     
-   
+    NSArray *_array;
+    
+    int rNum;
+    
+    int count;
+    
+    int faultCnt;
+       
 }
 
 @end
@@ -46,55 +53,160 @@
         random_number = arc4random() % 2;//0～9の数値をランダムに取得
 
         //NSLog(@"random_number%d", random_number);
-        int rNum = random_number;
+//        int rNum = random_number;
+        rNum = random_number;
+
+        
         NSLog(@"random_numberを出します=%d",rNum);
         NSLog(@"rNum =%d",array[rNum]);
         _ary =array[rNum];
-        
-        
+   
     }
     
     NSLog(@"_dicの中身を先ずは見る=%@",[_dic[@"問題１"]allKeys]);
     NSArray *ary = [_dic allKeys];
     
-    
     for (int i = 0; i < ary.count; i++){
         NSLog(@"aryの中身を確認=%@",ary[i]);
         _detailDic = _dic[ary[i]];
         NSLog(@"選択１まで出す=%@",_detailDic);
-        
     }
 
+    _array = [_dic[_ary][@"選択"]allKeys];
+    NSLog(@"_arrayの中身=%@",_array);
+    
+    for (int i = 0; i< _array.count; i++) {
+        NSLog(@"_arrayとして=%@",_dic[_ary][@"選択"][_array[i]]);
+        
+    }
+    
+    int k[4];
+    int l,i,s;
+    for (s=1; s<4; s++) {
+        k[s]=4;
+    }
+    for (i=0; i<4; i++) {
+        k[i] = arc4random_uniform(4);
+        for (l=0; l<4; l++) {
+            if (l==i) {
+                l++;
+            }
+            while (k[i]==k[l]) {
+                k[i] = arc4random_uniform(4);
+                l=0;
+            }
+        }
+    }
+    NSLog(@"%d %d %d %d ",k[0],k[1],k[2],k[3]);
+    int a = k[0];
+    int b = k[1];
+    int c = k[2];
+    int d = k[3];
+    
+    NSLog(@"中身は=%d",a);//ランダムで数字は取れてる
+    NSLog(@"_arrayの中身は=%@",_dic[_ary][@"選択"][_array[a]]);
+    NSLog(@"_arrayの中身は=%@",_dic[_ary][@"選択"][_array[b]]);
+    NSLog(@"_arrayの中身は=%@",_dic[_ary][@"選択"][_array[c]]);
+    NSLog(@"_arrayの中身は=%@",_dic[_ary][@"選択"][_array[d]]);
+    
+   // NSDictionary *
+    
+    //NSLog(@"先ずはarray配列から=%@",_array);
+    
     self.myLabel.text =_dic[_ary][@"問題"];//ランダム取得
-    NSLog(@"調べる=%@",_dic[_ary][@"選択"][@"選択1"]);
+    NSLog(@"調べる=%@",_dic[_ary][@"選択"]);
     
-    [self.select1 setTitle:_dic[_ary][@"選択"][@"選択1"]forState:UIControlStateNormal];
+    [self.select1 setTitle:_dic[_ary][@"選択"][_array[a]]forState:UIControlStateNormal];
     
-      NSLog(@"奇跡的に、の時のみ１が出ないので確認、=%@",_dic[_ary][@"選択"][@"選択1"]);
+    [self.select2 setTitle:_dic[_ary][@"選択"][_array[b]]forState:UIControlStateNormal];
     
-    [self.select2 setTitle:_dic[_ary][@"選択"][@"選択2"]forState:UIControlStateNormal];
-    
-    [self.select3 setTitle:_dic[_ary][@"選択"][@"選択3"]forState:UIControlStateNormal];
+    [self.select3 setTitle:_dic[_ary][@"選択"][_array[c]]forState:UIControlStateNormal];
 
-    [self.select4 setTitle:_dic[_ary][@"選択"][@"選択4"]forState:UIControlStateNormal];
+    [self.select4 setTitle:_dic[_ary][@"選択"][_array[d]]forState:UIControlStateNormal];
     
     self.myImage.image = [UIImage imageNamed:_dic[_ary][@"画像"]];
+    
+    count = 0;
+    faultCnt = 0;
+    
+    
+    self.myCorect.text = [NSString stringWithFormat:@"%d",count];
 
     
-
-    
-
 }
 - (IBAction)selectBtn1:(id)sender {
+
+    NSLog(@"Aの選択肢:%@",self.select1.currentTitle);
+    NSLog(@"plistの正解のValue(選択肢1) %@",_dic[_ary][@"選択"][@"選択1"]);
+    
+    if([self.select1.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){
+        // 正解の処理を書く
+        NSLog(@"正解");
+        count = count + 1;
+        self.myCorect.text = [NSString stringWithFormat:@"%d",count];
+    }else{
+        // 不正解の処理を書く
+        NSLog(@"不正解");
+        faultCnt = faultCnt + 1;
+//        faultCnt ++;
+        self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
+    }
 }
 
 - (IBAction)selectBtn2:(id)sender {
+    
+    NSLog(@"Bの選択肢:%@",self.select2.currentTitle);
+    NSLog(@"plistの正解のValue(選択肢1) %@",_dic[_ary][@"選択"][@"選択1"]);
+
+    if([self.select2.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){
+        // 正解の処理を書く
+        NSLog(@"正解");
+        count = count + 1;
+        self.myCorect.text = [NSString stringWithFormat:@"%d",count];
+    }else{
+        // 不正解の処理を書く
+        NSLog(@"不正解");
+        faultCnt = faultCnt + 1;
+        //        faultCnt ++;
+        self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
+    }
+
 }
 
 - (IBAction)selectBtn3:(id)sender {
+    NSLog(@"Cの選択肢:%@",self.select3.currentTitle);
+    NSLog(@"plistの正解のValue(選択肢1) %@",_dic[_ary][@"選択"][@"選択1"]);
+    if([self.select3.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){
+        // 正解の処理を書く
+        NSLog(@"正解");
+        count = count + 1;
+        self.myCorect.text = [NSString stringWithFormat:@"%d",count];
+    }else{
+        // 不正解の処理を書く
+        NSLog(@"不正解");
+        faultCnt = faultCnt + 1;
+        //        faultCnt ++;
+        self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
+    }
+
 }
 
 - (IBAction)selectBtn4:(id)sender {
+    NSLog(@"Dの選択肢:%@",self.select4.currentTitle);
+    NSLog(@"plistの正解のValue(選択肢1) %@",_dic[_ary][@"選択"][@"選択1"]);
+    if([self.select4.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){
+        // 正解の処理を書く
+        NSLog(@"正解");
+        count = count + 1;
+        self.myCorect.text = [NSString stringWithFormat:@"%d",count];
+    }else{
+        // 不正解の処理を書く
+        NSLog(@"不正解");
+        faultCnt = faultCnt + 1;
+        //        faultCnt ++;
+        self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
+    }
+
 }
 
 @end

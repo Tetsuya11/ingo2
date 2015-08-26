@@ -11,11 +11,11 @@
 		<key>選択</key>
 		<dict>
 			<key>選択1</key>
-			<string>なんと</string>
+			<string>ハコテ</string>
 			<key>選択2</key>
 			<string>関ヶ原</string>
 			<key>選択3</key>
-			<string>ハコテ</string>
+			<string>ナント</string>
 			<key>選択4</key>
 			<string>ゴッホ</string>
 		</dict>
@@ -29,9 +29,9 @@
 		<key>選択</key>
 		<dict>
 			<key>選択1</key>
-			<string>幹事MAX</string>
+			<string>ミラクルフライト</string>
 			<key>選択2</key>
-			<string>スリ</string>
+			<string>幹事MAXの法則</string>
 			<key>選択3</key>
 			<string>関ヶ原</string>
 			<key>選択4</key>
