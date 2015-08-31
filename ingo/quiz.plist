@@ -38,5 +38,23 @@
 			<string>兄貴</string>
 		</dict>
 	</dict>
+	<key>問題3</key>
+	<dict>
+		<key>問題</key>
+		<string>全てはボブのせいだと思うこと。</string>
+		<key>画像</key>
+		<string>Marina.jpeg</string>
+		<key>選択</key>
+		<dict>
+			<key>選択1</key>
+			<string>ボブ100%</string>
+			<key>選択2</key>
+			<string>ボブ待ち</string>
+			<key>選択3</key>
+			<string>BOB</string>
+			<key>選択4</key>
+			<string>ボブ盛り</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

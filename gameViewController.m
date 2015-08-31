@@ -19,12 +19,18 @@
     
     NSArray *_array;
     
+    NSArray *_arra;
+    
     int rNum;
     
     int count;
     
     int faultCnt;
-       
+    
+    int cnt;
+    
+    
+    NSArray *_test;
 }
 
 @end
@@ -41,16 +47,16 @@
     
     
     
-    NSArray *array = [_dic allKeys];//全体
-    NSLog(@"arrayの中身=%@",array);
+    _arra = [_dic allKeys];//全体
+    NSLog(@"arrayの中身=%@",_arra);
 
     int random_nummber;
     random_nummber = rand();
     
-    for(int i=0; i <array.count; i++){
+    for(int i=0; i <_arra.count; i++){
         int random_number;
 
-        random_number = arc4random() % 2;//0～9の数値をランダムに取得
+        random_number = arc4random() % 3;//0～9の数値をランダムに取得
 
         //NSLog(@"random_number%d", random_number);
 //        int rNum = random_number;
@@ -58,8 +64,9 @@
 
         
         NSLog(@"random_numberを出します=%d",rNum);
-        NSLog(@"rNum =%d",array[rNum]);
-        _ary =array[rNum];
+        NSLog(@"rNum =%d",_arra[rNum]);
+        _ary =_arra[rNum];
+        
    
     }
     
@@ -114,6 +121,8 @@
     //NSLog(@"先ずはarray配列から=%@",_array);
     
     self.myLabel.text =_dic[_ary][@"問題"];//ランダム取得
+    NSLog(@"問題は=%@",_dic[_ary][@"問題"]);
+    
     NSLog(@"調べる=%@",_dic[_ary][@"選択"]);
     
     [self.select1 setTitle:_dic[_ary][@"選択"][_array[a]]forState:UIControlStateNormal];
@@ -128,18 +137,23 @@
     
     count = 0;
     faultCnt = 0;
-    
+    cnt = 0;
     
     self.myCorect.text = [NSString stringWithFormat:@"%d",count];
+    self.myTotal.text =[NSString stringWithFormat:@"%d",cnt+1];
 
+    _test=[_dic allKeys];
+    NSLog(@"次は=%@",_test);
     
+
 }
+
+
 - (IBAction)selectBtn1:(id)sender {
 
     NSLog(@"Aの選択肢:%@",self.select1.currentTitle);
     NSLog(@"plistの正解のValue(選択肢1) %@",_dic[_ary][@"選択"][@"選択1"]);
-    
-    if([self.select1.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){
+    if([self.select1.currentTitle isEqualToString:_dic[_ary][@"選択"][@"選択1"] ]){//もしA選択欄とPlistの選択1
         // 正解の処理を書く
         NSLog(@"正解");
         count = count + 1;
@@ -151,6 +165,21 @@
 //        faultCnt ++;
         self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
     }
+    
+    for (int o =0;o<_arra.count;o++) {
+        NSLog(@"日本語表示=%@",_arra[cnt]);
+    
+    }
+    cnt++;
+    self.myTotal.text= [NSString stringWithFormat:@"%d",cnt+1];
+    NSLog(@"cnt中身=%@",_arra[cnt]);//問題１⇨問題２の順で表示
+    self.myLabel.text =_dic[_ary][@"問題"];
+    NSLog(@"問題は=%@",_dic[_ary][@"問題"]);
+    
+    
+
+
+    
 }
 
 - (IBAction)selectBtn2:(id)sender {
@@ -170,7 +199,10 @@
         //        faultCnt ++;
         self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
     }
-
+    cnt++;
+    self.myTotal.text= [NSString stringWithFormat:@"%d",cnt+1];
+    
+   
 }
 
 - (IBAction)selectBtn3:(id)sender {
@@ -187,7 +219,12 @@
         faultCnt = faultCnt + 1;
         //        faultCnt ++;
         self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
+        
+        
     }
+    cnt++;
+    self.myTotal.text= [NSString stringWithFormat:@"%d",cnt+1];
+    
 
 }
 
@@ -206,7 +243,9 @@
         //        faultCnt ++;
         self.myFault.text = [NSString stringWithFormat:@"%d",faultCnt];
     }
-
+    cnt++;
+    self.myTotal.text= [NSString stringWithFormat:@"%d",cnt+1];
+   
 }
 
 @end
