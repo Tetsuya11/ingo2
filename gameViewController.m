@@ -29,6 +29,8 @@
     
     int cnt;
     
+    int random_nummber;
+    
     
     NSArray *_test;
 }
@@ -44,39 +46,74 @@
     NSString* path = [bundle pathForResource:@"quiz" ofType:@"plist"];
     
     _dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    
-    
-    
+
     _arra = [_dic allKeys];//全体
+    
     NSLog(@"arrayの中身=%@",_arra);
 
-    int random_nummber;
-    random_nummber = rand();
-    
     for(int i=0; i <_arra.count; i++){
-        int random_number;
+        NSLog(@"先ずは問題1-5を順番に出す=%@",_arra);
+        NSLog(@"先ずは問題1-5を順番に出す==%@",_arra[i]);
+        NSLog(@"先ずは問題1-5を順番に出す=＝＝%@",_dic[_arra[i]][@"問題"]);//重複はなし　後はランダムに出す arrayに入れて
+        NSMutableArray *detail = _dic[_arra[i]][@"問題"];
+        
 
-        random_number = arc4random() % 3;//0～9の数値をランダムに取得
+        int e =_arra.count;
+//        NSLog(@"eの中身=%d",e);
+        random_nummber = arc4random() % e;//_arra.count分(問題数分)、取得？
+        NSLog(@"random_number出す%d",random_nummber);
+        int g =random_nummber;
+        NSLog(@"gを重複しないように出す=%i@",g);
+        
+        int x;
+        //乱数を4個生成
+        int t[4];
+        
+        //a[]の配列に０〜２までの別々の数値を入れる。
+        for(int i = 0; i < 3; i++){
+            t[i] = arc4random() % 3;
+            int x = t[i];
+            for( i = 0; i < 3 ; i++)
+                if(t[i] ==x)
+                    break;
+        }
 
-        //NSLog(@"random_number%d", random_number);
+        
+        
+        
 //        int rNum = random_number;
-        rNum = random_number;
-
         
-        NSLog(@"random_numberを出します=%d",rNum);
-        NSLog(@"rNum =%d",_arra[rNum]);
+       // rNum = random_number;//int型に入れる
+        NSLog(@"rNum =%d",rNum);//問題数をランダムで取得
+        NSLog(@"rNum問題は =%@",_arra[rNum]);//問題をランダムで取得
+        
         _ary =_arra[rNum];
-        
-   
+        NSLog(@"_aryの中身を確認させて頂きます=%@",_ary);
     }
+//    for(int i=0; i <_arra.count; i++){
+//        int random_number;
+//        NSLog(@"カウント=%lu",(unsigned long)_arra.count);
+//        int e =_arra.count;
+//        NSLog(@"eの中身=%d",e);
+//        random_number = arc4random() % e;//_arra.count分(問題数分)、取得？
+//        NSLog(@"random_number出す%d", random_number);
+//        //        int rNum = random_number;
+//        
+//        rNum = random_number;//int型に入れる
+//        NSLog(@"rNum =%d",rNum);//問題数をランダムで取得
+//        NSLog(@"rNum問題は =%@",_arra[rNum]);//問題をランダムで取得
+//        
+//        _ary =_arra[rNum];
+//        NSLog(@"_aryの中身を確認させて頂きます=%@",_ary);
+//    }
+
     
-    NSLog(@"_dicの中身を先ずは見る=%@",[_dic[@"問題１"]allKeys]);
-    NSArray *ary = [_dic allKeys];
-    
-    for (int i = 0; i < ary.count; i++){
-        NSLog(@"aryの中身を確認=%@",ary[i]);
-        _detailDic = _dic[ary[i]];
-        NSLog(@"選択１まで出す=%@",_detailDic);
+    for (int i = 0; i < _arra.count; i++){
+        NSLog(@"aryの中身を確認=%@",_arra[i]);//被らずに問題取得
+        _detailDic = _dic[_arra[i]];
+        NSLog(@"ランダム取得した問題をdic方式で出力=%@",_detailDic);
+        NSLog(@"ランダムで問題を出す=%@",_detailDic[@"問題"]);
+        //この時点で全五問の問題をランダムに順番に出力、出来ている
     }
 
     _array = [_dic[_ary][@"選択"]allKeys];
@@ -87,28 +124,27 @@
         
     }
     
-    int k[4];
-    int l,i,s;
-    for (s=1; s<4; s++) {
-        k[s]=4;
+    
+    int x;
+    //乱数を4個生成
+    int t[4];
+    
+    //a[]の配列に０〜２までの別々の数値を入れる。
+    for(int i = 0; i < 3; i++){
+        t[i] = arc4random() % 3;
+        int x = t[i];
+        for( i = 0; i < 3 ; i++)
+            if(t[i] ==x)
+                break;
     }
-    for (i=0; i<4; i++) {
-        k[i] = arc4random_uniform(4);
-        for (l=0; l<4; l++) {
-            if (l==i) {
-                l++;
-            }
-            while (k[i]==k[l]) {
-                k[i] = arc4random_uniform(4);
-                l=0;
-            }
-        }
-    }
-    NSLog(@"%d %d %d %d ",k[0],k[1],k[2],k[3]);
-    int a = k[0];
-    int b = k[1];
-    int c = k[2];
-    int d = k[3];
+    
+    //NSLogで表示すると別々の表示がされる。
+    NSLog(@"%d,%d,%d,%d",t[0],t[1],t[2],t[3]);
+
+    int a = t[0];
+    int b = t[1];
+    int c = t[2];
+    int d = t[3];
     
     NSLog(@"中身は=%d",a);//ランダムで数字は取れてる
     NSLog(@"_arrayの中身は=%@",_dic[_ary][@"選択"][_array[a]]);
@@ -119,11 +155,11 @@
    // NSDictionary *
     
     //NSLog(@"先ずはarray配列から=%@",_array);
-    
     self.myLabel.text =_dic[_ary][@"問題"];//ランダム取得
     NSLog(@"問題は=%@",_dic[_ary][@"問題"]);
     
-    NSLog(@"調べる=%@",_dic[_ary][@"選択"]);
+    
+    NSLog(@"調べる=%@",_dic[_ary][@"選択"]);//_aryにはランダムで問題が出るようになっている
     
     [self.select1 setTitle:_dic[_ary][@"選択"][_array[a]]forState:UIControlStateNormal];
     

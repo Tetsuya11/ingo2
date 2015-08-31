@@ -2,59 +2,95 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>問題１</key>
+	<key>問題1</key>
 	<dict>
-		<key>問題</key>
-		<string>卑怯な手を使う</string>
-		<key>画像</key>
-		<string>CA.jpeg</string>
 		<key>選択</key>
 		<dict>
-			<key>選択1</key>
-			<string>ハコテ</string>
-			<key>選択2</key>
-			<string>関ヶ原</string>
 			<key>選択3</key>
 			<string>ナント</string>
+			<key>選択2</key>
+			<string>関ヶ原</string>
+			<key>選択1</key>
+			<string>ハコテ</string>
 			<key>選択4</key>
 			<string>ゴッホ</string>
 		</dict>
-	</dict>
-	<key>問題２</key>
-	<dict>
-		<key>問題</key>
-		<string>奇跡的に手助けいらないフライト</string>
 		<key>画像</key>
-		<string></string>
+		<string>CA.jpeg</string>
+		<key>問題</key>
+		<string>卑怯な手を使う</string>
+	</dict>
+	<key>問題2</key>
+	<dict>
 		<key>選択</key>
 		<dict>
-			<key>選択1</key>
-			<string>ミラクルフライト</string>
-			<key>選択2</key>
-			<string>幹事MAXの法則</string>
 			<key>選択3</key>
 			<string>関ヶ原</string>
+			<key>選択2</key>
+			<string>幹事MAXの法則</string>
+			<key>選択1</key>
+			<string>ミラクルフライト</string>
 			<key>選択4</key>
 			<string>兄貴</string>
 		</dict>
+		<key>画像</key>
+		<string></string>
+		<key>問題</key>
+		<string>奇跡的に手助けいらないフライト</string>
 	</dict>
 	<key>問題3</key>
 	<dict>
-		<key>問題</key>
-		<string>全てはボブのせいだと思うこと。</string>
-		<key>画像</key>
-		<string>Marina.jpeg</string>
 		<key>選択</key>
 		<dict>
-			<key>選択1</key>
-			<string>ボブ100%</string>
-			<key>選択2</key>
-			<string>ボブ待ち</string>
 			<key>選択3</key>
 			<string>BOB</string>
+			<key>選択2</key>
+			<string>ボブ待ち</string>
+			<key>選択1</key>
+			<string>ボブ100%</string>
 			<key>選択4</key>
 			<string>ボブ盛り</string>
 		</dict>
+		<key>画像</key>
+		<string>Marina.jpeg</string>
+		<key>問題</key>
+		<string>全てはボブのせいだと思うこと。</string>
+	</dict>
+	<key>問題4</key>
+	<dict>
+		<key>選択</key>
+		<dict>
+			<key>選択3</key>
+			<string>Tサミット</string>
+			<key>選択4</key>
+			<string>ステマ</string>
+			<key>選択2</key>
+			<string>F４</string>
+			<key>選択1</key>
+			<string>プリズンブレイク</string>
+		</dict>
+		<key>画像</key>
+		<string></string>
+		<key>問題</key>
+		<string>女性陣が終電前に帰ろうとし、男性陣がそれを止めようとすること。</string>
+	</dict>
+	<key>問題5</key>
+	<dict>
+		<key>選択</key>
+		<dict>
+			<key>選択3</key>
+			<string>リムる</string>
+			<key>選択2</key>
+			<string>ポチる</string>
+			<key>選択1</key>
+			<string>ささやきウーロン</string>
+			<key>選択4</key>
+			<string>ドーピング</string>
+		</dict>
+		<key>画像</key>
+		<string></string>
+		<key>問題</key>
+		<string>お酒が飲めないのに最初にお酒を注文し、その後小さな声でウーロン茶を注文すること。</string>
 	</dict>
 </dict>
 </plist>
